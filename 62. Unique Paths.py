@@ -12,8 +12,5 @@ class Solution(object):
             T[1][j]=1
         for i in xrange(2,m+1):
             for j in xrange(2,n+1):
-                for k in xrange(1,i):
-                    T[i][j]+=T[k][j-1]
-                for l in xrange(1,j):
-                    T[i][j]+=T[i-1][l]
+                T[i][j]+=T[i-1][j]+T[i][j-1]
         return T[m][n]
