@@ -36,5 +36,4 @@ class Solution(object):
                     T[i]=T[i-2]
                 else:
                     return 0
-        print T
         return T[n]
