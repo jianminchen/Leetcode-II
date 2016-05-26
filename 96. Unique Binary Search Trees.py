@@ -14,6 +14,5 @@ class Solution(object):
         T[1]=1
 
         for i in xrange(2,n+1):
-            for j in xrange(i):
-                T[i]+=T[j]*T[i-1-j]
+            T[i]=sum([T[j]*T[i-1-j] for j in xrange(i)])
         return T[n]
