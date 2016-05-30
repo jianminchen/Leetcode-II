@@ -25,7 +25,7 @@ class Solution(object):
                 self.res.append(pathlist)
             return
         else:
-            if root.left!=None:
+            if root.left:
                 self.path(root.left, pathlist+[root.left.val])
-            if root.right!=None:
+            if root.right:
                 self.path(root.right, pathlist+[root.right.val])
