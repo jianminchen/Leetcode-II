@@ -14,14 +14,14 @@ class Solution(object):
         if root==None:
             return
         self.tlist=[]
-        self.dfs(root)
+        self.preorder(root)
         for i in xrange(len(self.tlist)-1):
             self.tlist[i].left=None
             self.tlist[i].right=self.tlist[i+1]
         
-    def dfs(self, root):
+    def preorder(self, root):
         if root==None:
             return
         self.tlist+=[root]
-        self.dfs(root.left)
-        self.dfs(root.right)
+        self.preorder(root.left)
+        self.preorder(root.right)
