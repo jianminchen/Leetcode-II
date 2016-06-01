@@ -16,4 +16,5 @@ class Solution(object):
                 nums.pop(i)
             else:
                 i+=1
-        nums+=[2]*num_of_2
+        for i in xrange(num_of_2):
+            nums+=[2]
