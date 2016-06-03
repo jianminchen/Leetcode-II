@@ -14,7 +14,7 @@ class Solution(object):
         dummynode.next=head
         pre=dummynode
         check=0
-        
+        # node "pre" and node "head" have different value
         while head and head.next:
             while head.next and head.val==head.next.val:
                 head=head.next
@@ -25,5 +25,4 @@ class Solution(object):
             else:
                 pre.next=head
             check=0
-        
         return dummynode.next
