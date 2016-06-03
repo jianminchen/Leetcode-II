@@ -14,15 +14,8 @@ class Solution(object):
         pslow=head
         
         while pslow and pfast and pfast.next:
-            pfast=pfast.next
-            if pfast.next:
-                pfast=pfast.next
-            else:
-                return False
-            if pslow.next:
-                pslow=pslow.next
-            else:
-                return False
+            pfast=pfast.next.next
+            pslow=pslow.next
             if pfast==pslow:
                 return True
         
