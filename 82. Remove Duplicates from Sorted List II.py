@@ -13,16 +13,16 @@ class Solution(object):
         dummynode=ListNode(-1)
         dummynode.next=head
         pre=dummynode
-        check=0
+        duplicate=0
         # node "pre" and node "head" have different values
         while head and head.next:
             while head.next and head.val==head.next.val:
                 head=head.next
-                check+=1
+                duplicate+=1
             head=head.next
-            if check==0:
+            if duplicate==0:
                 pre=pre.next
             else:
                 pre.next=head
-            check=0
+            duplicate=0
         return dummynode.next
