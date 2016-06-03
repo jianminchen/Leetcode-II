@@ -5,10 +5,9 @@ class Solution(object):
         :rtype: List[str]
         """
         dic={}
-        s=list(s)
         res=[]
         for i in xrange(len(s)-9):
-            substring="".join(s[i:i+10])
+            substring=s[i:i+10]
             if substring not in dic:
                 dic[substring]=1
             elif dic[substring]==1:
