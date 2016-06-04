@@ -15,16 +15,17 @@ class Solution(object):
         dummy.next=head
         end_of_less_than_x=dummy
         head_of_not_less_than_x=None
-        tail_of_not_less_than_x=None
+        end_of_not_less_than_x=None
+        
         while head:
             if head.val<x:
                 if head_of_not_less_than_x:
-                    tail_of_not_less_than_x.next=head.next
-                    if tail_of_not_less_than_x:
+                    end_of_not_less_than_x.next=head.next
+                    if end_of_not_less_than_x:
                         head.next=head_of_not_less_than_x
                         end_of_less_than_x.next=head
                         end_of_less_than_x=head
-                        head=tail_of_not_less_than_x.next
+                        head=end_of_not_less_than_x.next
                     else:
                         end_of_less_than_x.next=head
                         head.next=head_of_not_less_than_x
@@ -32,9 +33,10 @@ class Solution(object):
                     end_of_less_than_x=head
                     head=head.next
             else:
-                if head_of_not_less_than_x==None:
+                if head_of_not_less_than_x:
+                    end_of_not_less_than_x=head
+                    head=head.next
+                else:
                     head_of_not_less_than_x=head
-                tail_of_not_less_than_x=head
-                head=head.next
-
+                    
         return dummy.next
