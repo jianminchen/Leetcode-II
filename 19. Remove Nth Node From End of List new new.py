@@ -11,12 +11,11 @@ class Solution(object):
         :type n: int
         :rtype: ListNode
         """
-        pfast=head
-        pslow=head
-        
         if head.next==None and n==1:
             return []
             
+        pfast=head
+        pslow=head
         for i in xrange(n):
             pfast=pfast.next
             
