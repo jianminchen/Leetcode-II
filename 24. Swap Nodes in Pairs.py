@@ -18,7 +18,6 @@ class Solution(object):
             pre.next=head.next
             head.next.next=head
             head.next=temp
-            head=pre.next
-            head=head.next.next
+            head=head.next
             pre=pre.next.next
         return dummy.next
