@@ -26,11 +26,9 @@ class Solution(object):
                     head.next=end_of_odd_group.next
                 end_of_odd_group.next=head
                 end_of_odd_group=end_of_odd_group.next
-                head=pre.next
                 head_of_list=0
             else:
-                head=head.next
                 pre=pre.next
+            head=pre.next
             index+=1
-            
         return dummy.next
