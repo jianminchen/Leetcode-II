@@ -25,9 +25,8 @@ class Solution(object):
         while head:
             if n>1:
                 if length==n:
-                    if head.next:
-                        head.val=head.next.val
-                        head.next=head.next.next
+                    head.val=head.next.val
+                    head.next=head.next.next
                 else:
                     head=head.next
             else:
