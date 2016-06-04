@@ -13,5 +13,5 @@ class Solution(object):
             sum=sum*10+x%10
             if sum==x or sum==x/10:
                 return True
-            x=x/10
+            x/=10
         return False
