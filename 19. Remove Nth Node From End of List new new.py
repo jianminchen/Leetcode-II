@@ -11,8 +11,6 @@ class Solution(object):
         :type n: int
         :rtype: ListNode
         """
-        dummy=ListNode(-1)
-        dummy.next=head
         pfast=head
         pslow=head
         
