@@ -19,7 +19,7 @@ class Solution(object):
         while p:
             length+=1
             p=p.next
-        if length==1 and n--1:
+        if length==1 and n==1:
             return []
             
         while head:
