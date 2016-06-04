@@ -24,7 +24,7 @@ class Solution(object):
                     if end_of_not_less_than_x:
                         head.next=head_of_not_less_than_x
                         end_of_less_than_x.next=head
-                        end_of_less_than_x=head
+                        end_of_less_than_x=end_of_less_than_x.next
                         head=end_of_not_less_than_x.next
                     else:
                         end_of_less_than_x.next=head
