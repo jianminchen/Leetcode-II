@@ -8,5 +8,5 @@ class Solution(object):
         for i in xrange(n):
             length=len(initial)
             for j in xrange(length-1,-1,-1):
-                initial+=[initial[j]+2**i]
+                initial+=[initial[j]+(1<<i)]
         return initial
