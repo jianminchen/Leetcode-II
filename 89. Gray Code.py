@@ -4,9 +4,9 @@ class Solution(object):
         :type n: int
         :rtype: List[int]
         """
-        initial=[0]
+        res=[0]
         for i in xrange(n):
-            length=len(initial)
+            length=len(res)
             for j in xrange(length-1,-1,-1):
-                initial+=[initial[j]+(1<<i)]
-        return initial
+                res+=[res[j]+(1<<i)]
+        return res
