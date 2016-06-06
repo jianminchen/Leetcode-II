@@ -8,6 +8,7 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
+        minn=sys.maxint
         if len(nums)==0:
             return 0
         T=[sys.maxint for i in xrange(len(nums)+1)]
@@ -15,7 +16,7 @@ class Solution(object):
             for j in xrange(i+1):
                 if sum(nums[j:i+1])>=s:
                     T[i]=i+1-j
-        temp=min(T)
-        if temp==sys.maxint:
+                    minn=min(minn,T[i])
+        if minn==sys.maxint:
             return 0
-        return min(T)
+        return minn
