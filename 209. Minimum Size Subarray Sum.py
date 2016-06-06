@@ -9,8 +9,6 @@ class Solution(object):
         :rtype: int
         """
         minn=sys.maxint
-        if len(nums)==0:
-            return 0
         for i in xrange(1,len(nums)+1):
             if nums[i]>=s:
                 return 1
