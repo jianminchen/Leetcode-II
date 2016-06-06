@@ -10,9 +10,10 @@ class Solution(object):
         j=x/2+1
         while i<=j:
             mid=(i+j)/2
-            if mid**2<x:
+            temp=mid**2
+            if temp<x:
                 i=mid+1
-            elif mid**2>x:
+            elif temp>x:
                 j=mid-1
             else:
                 return mid
