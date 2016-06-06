@@ -9,7 +9,7 @@ class Solution(object):
         :rtype: int
         """
         minn=sys.maxint
-        for i in xrange(1,len(nums)+1):
+        for i in xrange(len(nums)):
             if nums[i]>=s:
                 return 1
             for j in xrange(i+1):
