@@ -4,11 +4,9 @@ class Solution(object):
         :type nums: List[int]
         :rtype: List[List[int]]
         """
-        nums=sorted(nums)
         self.res=[]
-        self.nums=nums
+        self.nums=sorted(nums)
         self.k=0
-        self.pre={}
         while self.k<=len(self.nums):
             self.combination([], 0)
             self.k+=1
