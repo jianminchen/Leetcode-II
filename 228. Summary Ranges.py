@@ -24,4 +24,3 @@ class Solution(object):
         else:
             res+=[str(begin)+"->"+str(end)]
         return res
-        return res
