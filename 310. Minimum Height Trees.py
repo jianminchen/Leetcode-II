@@ -23,6 +23,7 @@ class Solution(object):
             distance=[0 for i in xrange(self.n)]
             visited[root]=True
             queue+=[root]
+            temp=0
             while len(queue)>0:
                 current=queue.pop()
                 for i in xrange(self.n):
@@ -30,8 +31,7 @@ class Solution(object):
                         visited[i]=True
                         queue+=[i]
                         distance[i]=distance[current]+1
-                        temp=distance[i]
-            temp=max(distance)
+                        temp=max(temp,distance[i])
             if temp<minn:
                 minn=temp
                 res=[root]
