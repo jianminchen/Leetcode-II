@@ -8,8 +8,7 @@ class Solution(object):
             return []
         elif len(nums)==1:
             return [str(nums[0])]
-        begin=nums[0]
-        end=nums[0]
+        begin=end=nums[0]
         res=[]
         for i in xrange(1,len(nums)):
             if nums[i]==nums[i-1]+1:
@@ -19,10 +18,10 @@ class Solution(object):
                     res+=[str(begin)]
                 else:
                     res+=[str(begin)+"->"+str(end)]
-                begin=nums[i]
-                end=nums[i]
+                begin=end=nums[i]
         if begin==end:
             res+=[str(begin)]
         else:
             res+=[str(begin)+"->"+str(end)]
+        return res
         return res
