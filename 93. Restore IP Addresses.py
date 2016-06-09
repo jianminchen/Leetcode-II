@@ -14,7 +14,6 @@ class Solution(object):
         if start==len(s) and len(path)==4:
             self.res+=[".".join(path)]
             return
-        
         for i in xrange(start,len(s)):
             temp=s[start:i+1]
             if (len(temp)==1 or (len(temp)>1 and temp[0]!="0")) and int(temp)>=0 and int(temp)<=255:
