@@ -1,5 +1,3 @@
-# timeout
-
 class Solution(object):
     def canCompleteCircuit(self, gas, cost):
         """
@@ -16,15 +14,16 @@ class Solution(object):
                     check=0
                     break
                 tank+=gas[j]
-            for j in xrange(i+1):
-                if j==0:
-                    tank-=cost[len(cost)-1]
-                else:
-                    tank-=cost[j-1]
-                if tank<0:
-                    check=0
-                    break
-                tank+=gas[j]
             if check:
-                return i
+                for j in xrange(i+1):
+                    if j==0:
+                        tank-=cost[len(cost)-1]
+                    else:
+                        tank-=cost[j-1]
+                    if tank<0:
+                        check=0
+                        break
+                    tank+=gas[j]
+                if check:
+                    return i
         return -1
