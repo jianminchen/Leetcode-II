@@ -28,14 +28,15 @@ class Solution(object):
         visited=[False for i in xrange(n)]
         queue=[]
         distance=[1 for i in xrange(n)]
-        
         visited[0]=True
         queue+=[0]
         while len(queue)>0:
-            current=queue.pop()
+            current=queue.pop(0)
             for i in xrange(1,n):
                 if visited[i]==False and self.adj[current][i]==1:
                     visited[i]=True
                     queue+=[i]
                     distance[i]=distance[current]+1
-        return distance[n-1]
+                    if i==n-1:
+                        return distance[n-1]
+        return 0
