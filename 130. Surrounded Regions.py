@@ -11,7 +11,6 @@ class Solution(object):
         m=len(board)
         n=len(board[0])
         visited=[[False for j in xrange(n)] for i in xrange(m)]
-        rres=[]
         for i in xrange(m):
             for j in xrange(n):
                 stack=[]
