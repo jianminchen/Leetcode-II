@@ -24,6 +24,6 @@ class Solution(object):
                         check=0
                         break
                     tank+=gas[j]
-                if check:
-                    return i
+            if check:
+                return i
         return -1
