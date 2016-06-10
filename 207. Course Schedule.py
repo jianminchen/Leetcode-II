@@ -12,18 +12,20 @@ class Solution(object):
         for i in prerequisites:
             adj[i[1]]+=[i[0]]
         for i in xrange(numCourses):
-            if self.helper(i, visited, recstack, adj):
+            if self.cycle_exist(i, visited, recstack, adj):
                 return False
         return True
             
-    def helper(self, node, visited, recstack, adj):
+    def cycle_exist(self, node, visited, recstack, adj):
         if visited[node]==False:
             visited[node]=True
             recstack[node]=True
             for i in adj[node]:
-                if visited[i]==False and self.helper(i, visited, recstack, adj):
+                if visited[i]==False and self.cycle_exist(i, visited, recstack, adj):
                     return True
                 elif recstack[i]:
                     return True
+        recstack[node]=False
+        return False
         recstack[node]=False
         return False
