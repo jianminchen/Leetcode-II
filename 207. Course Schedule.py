@@ -27,5 +27,3 @@ class Solution(object):
                     return True
         recstack[node]=False
         return False
-        recstack[node]=False
-        return False
