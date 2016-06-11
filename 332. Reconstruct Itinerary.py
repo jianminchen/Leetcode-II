@@ -27,7 +27,7 @@ class Solution(object):
         if len(path)==len(self.tickets)+1:
             self.res=path[:]
             return
-        if path[len(path)-1] in self.adv and path[len(path)-1] in visited:
+        if path[len(path)-1] in self.adv:
             if len(path)<len(self.tickets):
                 for i in xrange(len(self.adv[path[len(path)-1]])):
                     if self.adv[path[len(path)-1]][i] in visited and visited[path[len(path)-1]][i]==False:
