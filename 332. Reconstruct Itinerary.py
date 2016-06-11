@@ -17,8 +17,9 @@ class Solution(object):
             visited[i[0]]+=[False]
         for key, value in self.adv.iteritems():
             self.adv[key]=sorted(value)
-        for i, j in self.adv.iteritems():
-            self.res=""
+        self.adv.keys().sort()
+        self.res=""
+        for i in self.adv.keys():
             self.DFS([i], visited)
             if self.res!="":
                 return self.res
@@ -27,7 +28,7 @@ class Solution(object):
         if len(path)==len(self.tickets)+1:
             self.res=path[:]
             return
-        if path[len(path)-1] in self.adv:
+        if path[len(path)-1] in self.adv.keys():
             if len(path)<len(self.tickets):
                 for i in xrange(len(self.adv[path[len(path)-1]])):
                     if self.adv[path[len(path)-1]][i] in visited and visited[path[len(path)-1]][i]==False:
