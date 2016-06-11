@@ -9,7 +9,7 @@ class Solution(object):
         :rtype: bool
         """
         for i in xrange(len(nums)):
-            for j in xrange(i+1,len(nums)):
-                if j-i<=k and abs(nums[j]-nums[i])<=t:
+            for j in xrange(i+1,i+k):
+                if abs(nums[j]-nums[i])<=t:
                     return True
         return False
