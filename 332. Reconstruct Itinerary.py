@@ -1,5 +1,3 @@
-# timeout
-
 class Solution(object):
     def findItinerary(self, tickets):
         """
@@ -19,10 +17,8 @@ class Solution(object):
             self.adv[key]=sorted(value)
         self.adv.keys().sort()
         self.res=""
-        for i in self.adv.keys():
-            self.DFS([i], visited)
-            if self.res!="":
-                return self.res
+        self.DFS(['JFK'], visited)
+        return self.res
             
     def DFS(self, path, visited):
         if len(path)==len(self.tickets)+1:
