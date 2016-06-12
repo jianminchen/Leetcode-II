@@ -8,8 +8,8 @@ class Solution(object):
         """
         if len(s)==1:
             return s
-        n = len(s)
-        L = [[0 for x in range(n)] for x in range(n)]
+        n=len(s)
+        L=[[0 for x in range(n)] for x in range(n)]
         for i in range(n):
             L[i][i]=1
             
@@ -17,7 +17,7 @@ class Solution(object):
         maxind=None
         for cl in range(2, n+1):
             for i in range(n-cl+1):
-                j = i+cl-1
+                j=i+cl-1
                 if s[i]==s[j] and cl==2:
                     L[i][j]=2
                     if L[i][j]>maxlength:
