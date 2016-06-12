@@ -20,9 +20,7 @@ public:
                 }
             }
             if(minn!=super_ugly[super_ugly.size()-1])
-            {
                 super_ugly.push_back(minn);
-            }
             index[min_ind]++;
         }
         return super_ugly[n-1];
